@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131212000053) do
+ActiveRecord::Schema.define(version: 20131212002330) do
 
   create_table "artists", force: true do |t|
     t.string   "first_name"
@@ -33,6 +33,11 @@ ActiveRecord::Schema.define(version: 20131212000053) do
     t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "artist_id"
+    t.integer  "museum_id"
   end
+
+  add_index "paintings", ["artist_id"], name: "index_paintings_on_artist_id"
+  add_index "paintings", ["museum_id"], name: "index_paintings_on_museum_id"
 
 end

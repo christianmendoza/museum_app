@@ -1,0 +1,6 @@
+<h1>Search results for: <%= params[:q] %></h1>
+<% @paintings.each do |painting| %>
+  <p>Title: <%= painting.title %></p>
+  <p>Description: <%= painting.description %></p>
+  <p>Image: <%= image_tag(painting.image) %></p>
+<% end %>

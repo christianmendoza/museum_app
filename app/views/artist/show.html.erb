@@ -1,0 +1,7 @@
+<h1>Paintings by: <%= @artist.first_name %> <%= @artist.last_name %></h1>
+
+<% @artist.paintings.each do |painting| %>
+  <p>Title: <%= painting.title %></p>
+  <p>Description: <%= painting.description %></p>
+  <p>Image: <%= image_tag(painting.image) %></p>
+<% end %>

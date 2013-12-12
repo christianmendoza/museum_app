@@ -1,0 +1,8 @@
+<h1>Paintings in: <%= @museum.name %> in <%= @museum.location %></h1>
+
+<% @museum.paintings.each do |painting| %>
+  <p>Title: <%= painting.title %></p>
+  <p>Artist: <%= painting.artist.first_name %> <%= painting.artist.last_name %></p>
+  <p>Description: <%= painting.description %></p>
+  <p>Image: <%= image_tag(painting.image) %></p>
+<% end %>

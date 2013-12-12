@@ -3,5 +3,7 @@ MuseumApp::Application.routes.draw do
   get "painting/index"
   root "museum#index"
 
-  resources :artists, only: [:show, :index, :new, :create, :update, :edit]
+  resources :artist, only: [:show, :index, :new, :create, :update, :edit]
+  resources :museum, only: [:show, :index, :new, :create, :update, :edit]
+
 end
